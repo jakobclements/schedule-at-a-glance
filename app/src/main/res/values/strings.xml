@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Schedule at a Glance</string>
+    <string name="enter_new_task_details">Enter New Task Details</string>
+    <string name="name_of_task">Name of Task</string>
+    <string name="create_this_task">Create This Task</string>
+
+    <string-array name="categories">
+        <item>Select a Category</item>
+        <item>Assignment / Lab</item>
+        <item>Project</item>
+        <item>Quiz</item>
+        <item>Test</item>
+        <item>Meeting</item>
+    </string-array>
+    <string-array name="importance">
+        <item>Select Priority Level</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Critical</item>
+    </string-array>
+
 </resources>
