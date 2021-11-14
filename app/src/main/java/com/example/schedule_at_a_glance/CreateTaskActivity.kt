@@ -1,5 +1,6 @@
 package com.example.schedule_at_a_glance
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -44,7 +45,7 @@ class CreateTaskActivity : AppCompatActivity() {
                 val dueDateMonth = binding.datePickerDate.month
                 val dueDateDay = binding.datePickerDate.dayOfMonth
                 val calendar = Calendar.getInstance()
-                calendar.set(dueDateYear, dueDateMonth, dueDateDay)
+                calendar.set(dueDateYear, dueDateMonth, dueDateDay, 23, 59, 59)
                 Log.d("Selected time", calendar.time.toString())
                 task.dueDate = calendar.time
 
@@ -55,7 +56,8 @@ class CreateTaskActivity : AppCompatActivity() {
                 // Create record
                 db.document(task.id!!).set(task)
 
-
+                // Redirect back to ViewTasksActivity {
+                startActivity(Intent(this, ViewTasksActivity::class.java))
             }
             else
             {

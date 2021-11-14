@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_create_task.xml" value="0.3148148148148148" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/drawable/add_task_button.xml" value="0.38981481481481484" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_create_task.xml" value="0.22" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_login.xml" value="0.4427083333333333" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_schedule.xml" value="0.33" />
       </map>
