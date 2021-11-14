@@ -50,4 +50,13 @@ dependencies {
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation 'androidx.fragment:fragment-ktx:1.3.6'
+
+    // Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
+    // Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+
+    // Firebase Auth library
+    implementation 'com.google.firebase:firebase-auth-ktx'
 }
