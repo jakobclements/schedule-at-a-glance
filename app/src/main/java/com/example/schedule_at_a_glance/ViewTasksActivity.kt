@@ -4,16 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
-import com.example.schedule_at_a_glance.databinding.ActivityScheduleBinding
+import com.example.schedule_at_a_glance.databinding.ActivityViewTasksBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ScheduleActivity : AppCompatActivity() {
+class ViewTasksActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityScheduleBinding
+    private lateinit var binding : ActivityViewTasksBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityScheduleBinding.inflate(layoutInflater)
+        binding = ActivityViewTasksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Connect to db

@@ -5,18 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.example.schedule_at_a_glance.databinding.ActivityMainBinding
+import com.example.schedule_at_a_glance.databinding.ActivityCreateTaskBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class CreateTaskActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding : ActivityCreateTaskBinding
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCreateTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // On button press
