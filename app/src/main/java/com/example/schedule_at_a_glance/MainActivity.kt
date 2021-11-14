@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
                     task.importance = binding.spinnerImportance.selectedItem.toString()
                 }
 
-
                 // Date formatting
                 val dueDateYear = binding.datePickerDate.year
                 val dueDateMonth = binding.datePickerDate.month

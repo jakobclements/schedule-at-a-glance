@@ -3,6 +3,7 @@
     <string name="enter_new_task_details">Enter New Task Details</string>
     <string name="name_of_task">Name of Task</string>
     <string name="create_this_task">Create This Task</string>
+    <string name="upcoming_schedule">Upcoming Schedule</string>
 
     <string-array name="categories">
         <item>Select a Category</item>
