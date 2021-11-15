@@ -3,8 +3,10 @@ package com.example.schedule_at_a_glance
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.schedule_at_a_glance.databinding.ActivityCreateTaskBinding
 import com.google.firebase.firestore.FirebaseFirestore
@@ -30,13 +32,12 @@ class CreateTaskActivity : AppCompatActivity() {
                 val task = Task()
                 task.taskName = binding.editTextTaskName.text.toString()
                 task.category = binding.spinnerCategory.selectedItem.toString()
+
                 // Default importance level to low if no selection is made (pos 0)
-                if (binding.spinnerImportance.selectedItemPosition == 0)
-                {
+                if (binding.spinnerImportance.selectedItemPosition == 0) {
                     task.importance = binding.spinnerImportance.getItemAtPosition(1).toString()
                 }
-                else
-                {
+                else {
                     task.importance = binding.spinnerImportance.selectedItem.toString()
                 }
 
@@ -56,14 +57,14 @@ class CreateTaskActivity : AppCompatActivity() {
                 // Create record
                 db.document(task.id!!).set(task)
 
-                // Redirect back to ViewTasksActivity {
+                // Redirect back to ViewTasksActivity
                 startActivity(Intent(this, ViewTasksActivity::class.java))
             }
             else
             {
-                // Don't add the task
+                // Don't add the task, notify user
+                Toast.makeText(this, "Name and Category are required fields", Toast.LENGTH_LONG).show()
             }
         }
-
     }
 }

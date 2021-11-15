@@ -15,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         // Authentication code copied from https://firebase.google.com/docs/auth/android/firebaseui
+
         // Choose authentication providers
         val providers = arrayListOf(
             AuthUI.IdpConfig.EmailBuilder().build(),
@@ -49,8 +50,8 @@ class LoginActivity : AppCompatActivity() {
             // sign-in flow using the back button. Otherwise check
             // response.getError().getErrorCode() and handle the error.
 
-            // Tell the user if the login failed
-            Toast.makeText(this, "Login unsuccessful", Toast.LENGTH_LONG).show()
+            // Notify the user
+            Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show()
         }
     }
 
