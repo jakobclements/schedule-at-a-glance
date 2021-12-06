@@ -7,4 +7,5 @@ class Task (var id: String?=null,
             var taskName: String?=null,
             var category: String?=null,
             var importance: String?=null,
-            var dueDate: Date?=null)
+            var dueDate: Date?=null,
+            var owner: String?=null)

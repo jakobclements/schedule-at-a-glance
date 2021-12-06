@@ -9,6 +9,8 @@ import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.schedule_at_a_glance.databinding.ActivityCreateTaskBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
@@ -50,7 +52,12 @@ class CreateTaskActivity : AppCompatActivity() {
                 Log.d("Selected time", calendar.time.toString())
                 task.dueDate = calendar.time
 
-                // Get id from FireStore
+                // Set owner
+                val currentUser = FirebaseAuth.getInstance().getUid()
+                Log.d("Current User", currentUser.toString())
+                task.owner = currentUser
+
+                // Get a unique task id from FireStore
                 val db = FirebaseFirestore.getInstance().collection("tasks")
                 task.id = db.document().id
 
