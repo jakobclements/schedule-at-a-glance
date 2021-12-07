@@ -40,13 +40,13 @@ class ViewTasksViewModel : ViewModel() {
 
             // Check if there are documents
             documents?.let{
-                // Iterate through documents
+                // Iterate through the documents
                 for (document in documents)
                 {
                     try {
                         // Get Task object from db
                         val task = document.toObject(Task::class.java)
-                        // Add task object to list
+                        // Add task object to ArrayList
                         taskList.add(task)
                     }catch(e : Exception)
                     {
@@ -54,10 +54,12 @@ class ViewTasksViewModel : ViewModel() {
                     }
                 }
             }
+            // Populate MutableLiveData List
             tasks.value = taskList
         }
     }
 
+    // Returns MutableLiveData List of tasks
     fun getTasks() : LiveData<List<Task>>
     {
         return tasks
