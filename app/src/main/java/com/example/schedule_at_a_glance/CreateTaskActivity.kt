@@ -64,8 +64,8 @@ class CreateTaskActivity : AppCompatActivity() {
                 // Create record
                 db.document(task.id!!).set(task)
 
-                // Redirect back to ViewTasksActivity
-                startActivity(Intent(this, ViewTasksActivity::class.java))
+                // Redirect back to RecyclerViewTasksActivity
+                startActivity(Intent(this, RecyclerViewTasksActivity::class.java))
             }
             else
             {

@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 
@@ -12,7 +13,7 @@ class ViewTasksViewModel : ViewModel() {
     // Mutable list to store Task objects
     private val tasks = MutableLiveData<List<Task>>()
 
-    // Init viewmodel
+    // Init ViewModel
     init{
         loadTasks()
     }
@@ -46,8 +47,11 @@ class ViewTasksViewModel : ViewModel() {
                     try {
                         // Get Task object from db
                         val task = document.toObject(Task::class.java)
-                        // Add task object to ArrayList
-                        taskList.add(task)
+                        val currentUser = FirebaseAuth.getInstance().getUid()
+                        if (task.owner == currentUser) {
+                            // Add task object to ArrayList
+                            taskList.add(task)
+                        }
                     }catch(e : Exception)
                     {
                         Log.e("Error", "Exception Thrown", e)
