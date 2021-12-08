@@ -3,14 +3,12 @@ package com.example.schedule_at_a_glance
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.schedule_at_a_glance.databinding.ActivityCreateTaskBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
@@ -64,8 +62,8 @@ class CreateTaskActivity : AppCompatActivity() {
                 // Create record
                 db.document(task.id!!).set(task)
 
-                // Redirect back to RecyclerViewTasksActivity
-                startActivity(Intent(this, RecyclerViewTasksActivity::class.java))
+                // Redirect back to ViewTasksRecyclerActivity
+                startActivity(Intent(this, ViewTasksRecyclerActivity::class.java))
             }
             else
             {

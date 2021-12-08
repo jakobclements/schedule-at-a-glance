@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 
-class RecyclerViewAdapter (val context : Context,
-                           val tasks : List<Task>) : RecyclerView.Adapter<RecyclerViewAdapter.TaskViewHolder>() {
+class ViewTasksRecyclerViewAdapter (val context : Context,
+                                    val tasks : List<Task>) : RecyclerView.Adapter<ViewTasksRecyclerViewAdapter.TaskViewHolder>() {
 
     // Gets Task objects from item_task.xml
     inner class TaskViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {

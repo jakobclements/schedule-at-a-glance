@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
             val user = FirebaseAuth.getInstance().currentUser
-            val intent = Intent(this, RecyclerViewTasksActivity::class.java)
+            val intent = Intent(this, ViewTasksRecyclerActivity::class.java)
             intent.putExtra("user", user)
             startActivity(intent)
         } else {

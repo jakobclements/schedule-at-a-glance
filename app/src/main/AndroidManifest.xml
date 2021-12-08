@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Schedule_at_a_glance">
         <activity
-            android:name=".RecyclerViewTasksActivity"
+            android:name=".ViewTasksRecyclerActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"

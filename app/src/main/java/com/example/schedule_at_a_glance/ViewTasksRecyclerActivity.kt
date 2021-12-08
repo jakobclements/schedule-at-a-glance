@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.schedule_at_a_glance.databinding.ActivityRecyclerViewTasksBinding
-import com.google.firebase.auth.FirebaseAuth
 
-class RecyclerViewTasksActivity : AppCompatActivity() {
+class ViewTasksRecyclerActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityRecyclerViewTasksBinding
 
@@ -17,7 +16,7 @@ class RecyclerViewTasksActivity : AppCompatActivity() {
 
         val viewModel : ViewTasksViewModel by viewModels()
         viewModel.getTasks().observe(this, { tasks ->
-            var recyclerViewAdapter = RecyclerViewAdapter(this, tasks)
+            var recyclerViewAdapter = ViewTasksRecyclerViewAdapter(this, tasks)
             binding.viewTasksRecyclerView.adapter = recyclerViewAdapter
         })
 
