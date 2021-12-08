@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.example.schedule_at_a_glance.databinding.ActivityViewTasksRecyclerBinding
 import com.firebase.ui.auth.AuthUI
 
-class ViewTasksRecyclerActivity : AppCompatActivity() {
+class ViewTasksRecyclerActivity : AppCompatActivity(), ViewTasksRecyclerViewAdapter.TaskItemListener {
 
     private lateinit var binding : ActivityViewTasksRecyclerBinding
 
@@ -19,7 +19,7 @@ class ViewTasksRecyclerActivity : AppCompatActivity() {
 
         val viewModel : ViewTasksViewModel by viewModels()
         viewModel.getTasks().observe(this, { tasks ->
-            var recyclerViewAdapter = ViewTasksRecyclerViewAdapter(this, tasks)
+            var recyclerViewAdapter = ViewTasksRecyclerViewAdapter(this, tasks, this)
             binding.viewTasksRecyclerView.adapter = recyclerViewAdapter
         })
 
@@ -41,6 +41,15 @@ class ViewTasksRecyclerActivity : AppCompatActivity() {
         binding.buttonOptions.setOnClickListener{
             Toast.makeText(this, "No options yet - check back soon!", Toast.LENGTH_SHORT).show()
         }
+    }
 
+    override fun taskSelected(task: Task) {
+        val intent = Intent(this, TaskDetailsActivity::class.java)
+        intent.putExtra("taskId", task.id)
+        intent.putExtra("taskName", task.taskName)
+        intent.putExtra("dueDate", task.dueDate.toString())
+        intent.putExtra("category", task.category)
+        intent.putExtra("importance", task.importance)
+        startActivity(intent)
     }
 }

@@ -26,6 +26,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/enter_new_task_details"
                 android:textSize="@dimen/default_heading_size"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

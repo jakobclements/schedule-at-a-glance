@@ -6,6 +6,7 @@
     <string name="upcoming_schedule">Upcoming Schedule</string>
     <string name="logout">Logout</string>
     <string name="options">Options</string>
+    <string name="task_details">Task Details</string>
 
     <string-array name="categories">
         <item>Select a Category</item>

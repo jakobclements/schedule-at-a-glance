@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Schedule_at_a_glance">
         <activity
+            android:name=".TaskDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".ViewTasksRecyclerActivity"
             android:exported="true" />
         <activity
@@ -23,7 +26,7 @@
         </activity>
         <activity
             android:name=".ViewTasksActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CreateTaskActivity"
             android:exported="true" />
