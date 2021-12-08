@@ -4,13 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/drawable/add_task_button.xml" value="0.38981481481481484" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/drawable/task_background.xml" value="0.565625" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/drawable/task_background_selected.xml" value="0.565625" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/drawable/task_selector.xml" value="0.565625" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_create_task.xml" value="0.22" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_login.xml" value="0.4427083333333333" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_recycler_view_tasks.xml" value="0.309375" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_schedule.xml" value="0.33" />
         <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_view_tasks.xml" value="0.309375" />
-        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/item_task.xml" value="0.309375" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/activity_view_tasks_recycler.xml" value="0.33" />
+        <entry key="..\:/Users/jakob/AndroidStudioProjects/schedule_at_a_glance/app/src/main/res/layout/item_task.xml" value="0.33" />
       </map>
     </option>
   </component>
