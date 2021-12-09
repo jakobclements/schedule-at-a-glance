@@ -7,6 +7,8 @@
     <string name="logout">Logout</string>
     <string name="options">Options</string>
     <string name="task_details">Task Details</string>
+    <string name="return_to_schedule">Return to Schedule</string>
+    <string name="go_back">Go Back</string>
 
     <string-array name="categories">
         <item>Select a Category</item>

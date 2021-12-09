@@ -17,6 +17,12 @@ class ViewTasksRecyclerActivity : AppCompatActivity(), ViewTasksRecyclerViewAdap
         binding = ActivityViewTasksRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Check for notifications and display them
+        val toastMsg = intent.getStringExtra("toast")
+        if (toastMsg != null){
+            Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show()
+        }
+
         val viewModel : ViewTasksViewModel by viewModels()
         viewModel.getTasks().observe(this, { tasks ->
             var recyclerViewAdapter = ViewTasksRecyclerViewAdapter(this, tasks, this)
@@ -35,11 +41,6 @@ class ViewTasksRecyclerActivity : AppCompatActivity(), ViewTasksRecyclerViewAdap
                 .addOnCompleteListener {
                     startActivity(Intent(this, LoginActivity::class.java))
                 }
-        }
-
-        // Options button
-        binding.buttonOptions.setOnClickListener{
-            Toast.makeText(this, "No options yet - check back soon!", Toast.LENGTH_SHORT).show()
         }
     }
 
